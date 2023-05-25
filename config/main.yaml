@@ -1,5 +1,5 @@
 defaults:
-  - model
+  - model: model
   - _self_
 
 raw:
@@ -24,10 +24,10 @@ final:
     path: ${final.dir}/${final.y_test.name}
 
 model:
-  dir: models
+  dir: model
   name: loan_default_pred_model.pkl
   path: ${model.dir}/${model.name}
 
 mlflow_tracking_ui: https://dagshub.com/joe88data/loan-default-prediction-model.mlflow
 mlflow_USERNAME: joe88data
-#mlflow_PASSWORD: e94114ca328c75772401898d749decb6dbcbeb21
+mlflow_PASSWORD: e94114ca328c75772401898d749decb6dbcbeb21

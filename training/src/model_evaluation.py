@@ -44,7 +44,6 @@ def log_metrics(**metrics: dict):
 
 @hydra.main(version_base=None, config_path="../../config", config_name="main")
 def evaluate(config: DictConfig):
-    #mlflow.set_experiment('Customer_Churn')
     os.environ['MLFLOW_TRACKING_URI']=config.mlflow_tracking_ui
     os.environ['MLFLOW_TRACKING_USERNAME']=config.mlflow_USERNAME
     os.environ['MLFLOW_TRACKING_PASSWORD']=config.mlflow_PASSWORD
