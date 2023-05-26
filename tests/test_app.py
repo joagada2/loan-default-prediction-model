@@ -2,5 +2,5 @@ from app import predict_post
 
 
 def test_app():
-    assert predict_post() == "Hello, world!"
+    assert predict_post(datas) == "Hello, world!"
 
