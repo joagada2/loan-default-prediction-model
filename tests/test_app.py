@@ -1,4 +1,4 @@
-from app.app import predict_post
+from app import predict_post
 
 
 def test_app():
