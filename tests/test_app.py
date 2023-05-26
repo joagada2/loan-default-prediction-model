@@ -1,6 +1,6 @@
-from app.app import app
+from app.app import predict_post
 
 
 def test_app():
-    assert app() == "Hello, world!"
+    assert predict_post() == "Hello, world!"
 
