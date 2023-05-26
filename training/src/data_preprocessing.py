@@ -9,6 +9,9 @@ from sklearn.model_selection import train_test_split
 def get_data(raw_path: str):
     data = pd.read_csv(raw_path)
     return data
+def drop_feat(df:pd.DataFrame, feat_to_drop:list):
+    df = df.drop(columns = feat_to_drop, axis=1)
+    return df
 
 @hydra.main(version_base=None, config_path="../../config", config_name="main")
 def process_data(config: DictConfig):
@@ -18,13 +21,13 @@ def process_data(config: DictConfig):
     data = get_data(abspath(config.raw.path))
 
     #drop employment title
-    data = data.drop('emp_title',axis=1)
+    #data = data.drop('emp_title',axis=1)
 
     #drop employment length
-    data = data.drop('emp_length',axis=1)
+    #data = data.drop('emp_length',axis=1)
 
     #drop loan title
-    data = data.drop('title',axis=1)
+    #data = data.drop('title',axis=1)
 
     #fill missing values in revol_util column
     data['revol_util'] = data['revol_util'].fillna(data['revol_util'].mean())
@@ -69,27 +72,27 @@ def process_data(config: DictConfig):
     data['term'] = data['term'].apply(lambda term: int(term[:3]))
 
     #drop grade since grade is embeded in subgrade
-    data = data.drop('grade',axis=1)
+    #data = data.drop('grade',axis=1)
 
     #group some values of the home ownership feature into "OTHER"
     data['home_ownership']=data['home_ownership'].replace(['NONE', 'ANY'], 'OTHER')
 
     #drop issue_d to avoid data leakage
-    data = data.drop('issue_d',axis=1)
+    #data = data.drop('issue_d',axis=1)
 
     #extract year, convert to integer and use as earliest_cr_line
     data['earliest_cr_year'] = data['earliest_cr_line'].apply(lambda date:int(date[-4:]))
-    data = data.drop('earliest_cr_line',axis=1)
+    #data = data.drop('earliest_cr_line',axis=1)
 
     #create zip_code feature by extracting zip code from address and remove address feature
     data['zip_code'] = data['address'].apply(lambda address:address[-5:])
-    data = data.drop('address',axis=1)
+    #data = data.drop('address',axis=1)
 
     #convert the target feature to dummies
     data['loan_repaid'] = data['loan_status'].map({'Fully Paid':1,'Charged Off':0})
-
+    data = drop_feat(data, config.feature.drop)
     #no longer needed since it has been mapped to numerical values converted to loan_repaid 
-    data = data.drop('loan_status', axis = 1)
+    #data = data.drop('loan_status', axis = 1)
     print(data.shape)
     #convert the categorical variables to dummy variables
     data = pd.get_dummies(data,drop_first=True)
