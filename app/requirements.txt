@@ -4,3 +4,4 @@ uvicorn
 fastapi
 pydantic
 joblib
+gunicorn
