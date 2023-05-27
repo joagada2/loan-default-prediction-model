@@ -1,14 +1,26 @@
-defaults:
-  - model: model
-  - _self_
-
+model:
+  objective: binary:logistic
+  seed: 42
+  gamma: 0
+  learning_rate: 0.25
+  max_depth: 6
+  reg_lambda: 10
+  scale_pos_weight: 0.24
+  subsample: 0.9
+  colsample_bytree: 0.5
+  use_label_encoder: false
+  missing: 0
+  verbose: true
+  early_stopping_rounds: 10
+  eval_metric: aucpr
+  dir: model
+  name: loan_default_pred_model.pkl
+  path: ${model.dir}/${model.name}
 raw:
   path: data/raw/lending_club_loan_two.csv
   unit_test: data/raw/unit_testing_data.csv
-
 processed:
   path: data/processed/processed.csv
-
 final:
   dir: data/final
   X_train:
@@ -23,21 +35,23 @@ final:
   y_test:
     name: y_test.csv
     path: ${final.dir}/${final.y_test.name}
-
-model:
-  dir: model
-  name: loan_default_pred_model.pkl
-  path: ${model.dir}/${model.name}
-
 model1:
   dir: app/model1
   name: loan_default_pred_model_depl.pkl
-  path: ${model1.dir}/${model1.name}
-
+  path: ${model1.dir}/${model.name}
 feature:
-  drop: ['emp_title','emp_length','title','grade','issue_d','earliest_cr_line','address','loan_status']
-  test: ['X1','X2']
-
+  drop:
+  - emp_title
+  - emp_length
+  - title
+  - grade
+  - issue_d
+  - earliest_cr_line
+  - address
+  - loan_status
+  test:
+  - X1
+  - X2
 mlflow_tracking_ui: https://dagshub.com/joe88data/loan-default-prediction-model.mlflow
 mlflow_USERNAME: joe88data
 mlflow_PASSWORD: e94114ca328c75772401898d749decb6dbcbeb21

@@ -8,7 +8,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
 
-model = joblib.load("model/loan_default_pred_model.pkl")
+model = joblib.load("model1/loan_default_pred_model_depl.pkl")
 
 def create_type_instance(type_name: str):
     return locate(type_name).__call__()

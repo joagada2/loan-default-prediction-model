@@ -50,6 +50,7 @@ def train(config: DictConfig):
 
     # Save model
     joblib.dump(model, abspath(config.model.path))
+    joblib.dump(model, abspath(config.model1.path))
 
 if __name__ == "__main__":
     train()
