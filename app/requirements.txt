@@ -1,6 +1,6 @@
-typing==3.4.4.3
-numpy==1.24.2
+typing
+numpy
 uvicorn
-fastapi==0.95.0
-pydantic==1.9.1
-joblib==1.2.0
+fastapi
+pydantic
+joblib
