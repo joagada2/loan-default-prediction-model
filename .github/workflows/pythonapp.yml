@@ -5,7 +5,6 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - run: |
@@ -31,11 +30,9 @@ jobs:
           export PYTHONPATH=training/src
           pytest
       - name: Deploy to Heroku
-        env:
-          HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
-          HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
-          HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
-        if: github.ref == 'refs/heads/main' && job.status == 'success'
-        run: |
-          git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
-          git push heroku HEAD:main -f
+        uses: akhileshns/heroku-deploy@v3.12.14 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "loan-default-prediction-app" #Must be unique in Heroku
+          heroku_email: "joe88data@outlook.com"
+
