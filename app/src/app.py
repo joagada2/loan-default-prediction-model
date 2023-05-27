@@ -1,7 +1,6 @@
 import pickle
 from pydoc import locate
 from typing import List
-
 import numpy as np
 import uvicorn
 from fastapi import FastAPI
