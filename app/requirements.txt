@@ -5,3 +5,4 @@ fastapi
 pydantic
 joblib
 gunicorn
+xgboost
