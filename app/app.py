@@ -27,8 +27,8 @@ app = FastAPI()
 async def predict_post(datas: List[InputFeatures]):
     return model.predict(np.asarray([list(data.__dict__.values()) for data in datas])).tolist()
 
-if __name__ == "__main__":
-    print(get_features_dict(model))
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+#if __name__ == "__main__":
+    #print(get_features_dict(model))
+    #uvicorn.run(app, host="0.0.0.0", port=8080)
 
 # reference: https://medium.com/predictly-on-tech/serve-any-xgboost-model-with-fastapi-in-less-than-40-lines-85adbb3c43b8
