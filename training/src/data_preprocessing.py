@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 from hydra.utils import to_absolute_path as abspath
 from omegaconf import DictConfig
-from patsy import dmatrices
 from sklearn.model_selection import train_test_split
 
 def get_data(raw_path: str):
