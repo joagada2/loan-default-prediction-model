@@ -24,6 +24,15 @@ final:
     name: y_test.csv
     path: ${final.dir}/${final.y_test.name}
 
+prediction_input:
+  path: inferencing/input_data/input_df.csv
+
+prediction_output:
+  path: inferencing/prediction/prediction_df.csv
+
+processed_input:
+  path: inferencing/processed1/processed_df.csv
+
 model:
   dir: model
   name: loan_default_pred_model.pkl
@@ -37,6 +46,7 @@ model1:
 feature:
   drop: ['emp_title','emp_length','title','grade','issue_d','earliest_cr_line','address','loan_status']
   test: ['X1','X2']
+  drop1: ['emp_title','emp_length','title','grade','issue_d','earliest_cr_line','address']
 
 mlflow_tracking_ui: https://dagshub.com/joe88data/loan-default-prediction-model.mlflow
 mlflow_USERNAME: joe88data
