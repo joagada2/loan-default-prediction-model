@@ -15,7 +15,7 @@ The model was wrapped in a FastAPI
 ### Remote Hosting of API
 The FastAPI was exposed on Heroku for remote consumption
 ### Continous Integration and Continous Deployment (CI/CD)
-I configured continuous integration and continuous deployment workflow for the project usingGitHubb Action. On pushing a new version of the project to Github, the process of building and deployment of the new version to Heroku is done automatically.
+I configured continuous integration and continuous deployment workflow for the project using GitHub Action. On pushing a new version of the project to Github, the process of building and deployment of the new version to Heroku is done automatically.
 ### Web App
 I built a web application that uses the model for prediction using Streamlit
 ### Offline Inferencing
@@ -24,8 +24,14 @@ The model is configured for offline inferencing. Unlabel dataframe can be taken 
 Git was used for version control while DVC was used for model and data version control
 ## USING THE PROJECT
 The following steps can be followed to clone and run the project
-clone project by running: git clone https://github.com/joagada2/loan-default-prediction-mode.git
-download dataset from 
+a.  Clone project by running: git clone https://github.com/joagada2/loan-default-prediction-model.git
+b.  Download the dataset from: https://www.kaggle.com/wordsforthewise/lending-club and save it in the raw data sub folder in the data folder. name the dataset lending_club_loan_two.csv
+c.  Change the directory to the project by running the following command from your command line: cd loan-default-prediction-model
+d. To use the API, run the following command from your command line: python app/app.py
+e. To run the re-training code, run the following command from your command line: python training/src/main.py
+f.  To run the streamlit application, run the following command from your command line: streamlit run wev/app.py
+g. To use the model for offline batch inferencing, select a subset of the training dataset, delete the label column, save the dataframe in the input_data subfolder in the inferencing folder, and run the following code from your command line: python inferencing/batch_inferencing.py
+### contact me on whatsapp number +2348155337422 for further clarification on this project. Note: I am open to new opportunities in machine learning
 
 
 
