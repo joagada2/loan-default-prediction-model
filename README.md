@@ -31,7 +31,7 @@ The following steps can be followed to clone and run the project
  -  To run the re-training code, run the following command from your command line: python training/src/main.py
  -  To run the streamlit application, run the following command from your command line: streamlit run wev/app.py
  -  To use the model for offline batch inferencing, select a subset of the training dataset, delete the label column, save the dataframe in the input_data subfolder in the inferencing folder, and run the following code from your command line: python inferencing/batch_inferencing.py
-### contact me on whatsapp number +2348155337422 for further clarification on this project. Note: I am open to new opportunities in machine learning
+### contact me on whatsapp number +2348155337422 for further clarifications on this project. Note: I am open to new opportunities in machine learning
 
 
 
