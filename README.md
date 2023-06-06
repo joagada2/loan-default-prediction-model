@@ -21,7 +21,7 @@ I built a web application that uses the model for prediction using Streamlit
 ### Offline Inferencing
 The model is configured for offline inferencing. Unlabel dataframe can be taken in and returned as dataframe with predicted label
 ### Project Versioning
-Git was used for version control while DVC was used for model and data version control
+Git was used for project version control while DVC was used for model and data version control
 ## USING THE PROJECT
 The following steps can be followed to clone and run the project
  -   Clone project by running: git clone https://github.com/joagada2/loan-default-prediction-model.git
