@@ -3,9 +3,9 @@ This is an end-to-end machine learning project. Here, I will describe the projec
 
 ## PROJECT OVERVIEW/STEPS
 ### Selection of Problem
-Loan, when taken has the probability of repayment/default in line with loan terms. It is the desire of every lending organization to have their borrowers pay back their loan as at when due. However, this is not usually the case. In event of loan default, lending organizations bear the loss as the loans are charged off and the shortfall treated as expenditure. The provisions for loan defaults reduce total loan portfolio of lending organizations and as such affect interest earnings on assets, thereby constituting a huge cost to lending houses. In view of this, every organization wish to give loan only to those who will pay back, only if they can accurately identify borrowers who will pay back their loan. In this project, I built a Machine Learning solution capable of predicting loan default at the point of application, with high accuracy. The model can be adopted for data-driven decisions as regards the approval or rejection of loan applications.
+Loan, when taken has the probability of repayment/default in line with loan terms. It is the desire of every lending organization to have their borrowers pay back their loans when due. However, this is not usually the case. In the event of loan default, lending organizations bear the loss as the loans are charged off and the shortfall is treated as expenditure. The provisions for loan defaults reduce the total loan portfolio of lending organizations and as such affect interest earnings on assets, thereby constituting a huge cost to lending houses. In view of this, every organization wishes to give loans only to those who will pay them back, only if they can accurately identify borrowers who will pay back their loans. In this project, I built a Machine Learning solution capable of predicting loan default at the point of application, with high accuracy. The model can be used for data-driven decisions as regards the approval or rejection of loan applications.
 ### Model Training
-The model training process involved extensive EDA, feature engineering, missing value handling and data preprocessing. XGBoost was used for training. Here, I also carried out hyperparameter tunning, established the optimum hyperparameter and trained the final model. Details are in the notebook.
+The model training process involved extensive EDA, feature engineering, missing value handling, and data preprocessing. XGBoost was used for training. Here, I also carried out hyperparameter tunning, established the optimum hyperparameter, and trained the final model. Details are in the notebook.
 ### Experiment Tracking
 The experiment was registered and model parameters as well as metrics logged using MLflow and dagshub.The combination of MLflow and dagshub helped to overcome the major challenge of using MLflow which is the difficulties in collaboration since MLflow experiment tracking and model registry are traditionally done locally. In the case of this project, experiment tracking is done remotely. The project with experiments is also hosted on dagshub at https://dagshub.com/joe88data/loan-default-prediction-model
 ### Workflow Orchestration
@@ -15,7 +15,7 @@ The model was wrapped in a FastAPI
 ### Remote Hosting of API
 The FastAPI was exposed on Heroku for remote consumption
 ### Continous Integration and Continous Deployment (CI/CD)
-I configured continuous integration and continuous deployment workflow for the project using GitHub Action. On pushing a new version of the project to Github, the process of building and deployment of the new version to Heroku is done automatically.
+I configured continuous integration and continuous deployment workflow for the project using GitHub Action. On pushing a new version of the project to Github, the process of building and deployment of the new version to Heroku triggered and completed automatically.
 ### Web App
 I built a web application that uses the model for prediction, using Streamlit
 ### Offline Inferencing
