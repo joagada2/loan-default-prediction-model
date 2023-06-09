@@ -4,6 +4,12 @@ import numpy as np
 from hydra.utils import to_absolute_path as abspath
 from omegaconf import DictConfig
 from sklearn.model_selection import train_test_split
+import os
+import whylogs as why
+from whylogs.api.writer.whylabs import WhyLabsWriter
+import datetime
+
+from hydra import compose, initialize
 
 def get_data(raw_path: str):
     data = pd.read_csv(raw_path)
@@ -15,9 +21,12 @@ def drop_feat(df:pd.DataFrame, feat_to_drop:list):
 @hydra.main(version_base=None, config_path="../../config", config_name="main")
 def process_data(config: DictConfig):
     """Function to process the data"""
+    # Note- uploading profile to WhyLabs is not yet supported by whylogs v1
+
+    data = get_data(abspath(config.raw.path))
 
     #apply get data function to import dataset
-    data = get_data(abspath(config.raw.path))
+    #data = get_data(abspath(config.raw.path))
 
     #drop employment title
     #data = data.drop('emp_title',axis=1)
@@ -102,9 +111,14 @@ def process_data(config: DictConfig):
     # get processed data
     data = get_data(abspath(config.processed.path))
 
+    print(data.shape)
+
     # split feature and targets
     X = data.drop('loan_repaid', axis=1)
     y = data['loan_repaid']
+
+    print(X.shape)
+    print(y.shape)
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
 

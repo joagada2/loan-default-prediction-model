@@ -9,6 +9,64 @@ raw:
 processed:
   path: data/processed/processed.csv
 
+raw_monitoring:
+  dir: monitoring/raw_monitoring
+  new_df_1:
+    name: new_df_1.csv
+    path: ${raw_monitoring.dir}/${raw_monitoring.new_df_1.name}
+  new_df_2:
+    name: new_df_2.csv
+    path: ${raw_monitoring.dir}/${raw_monitoring.new_df_2.name}
+  new_df_3:
+    name: new_df_3.csv
+    path: ${raw_monitoring.dir}/${raw_monitoring.new_df_3.name}
+  new_df_4:
+    name: new_df_4.csv
+    path: ${raw_monitoring.dir}/${raw_monitoring.new_df_4.name}
+
+processed_monitoring:
+  dir: monitoring/processed_monitoring
+  new_df_1:
+    name: new_df_1.csv
+    path: ${processed_monitoring.dir}/${processed_monitoring.new_df_1.name}
+  new_df_2:
+    name: new_df_2.csv
+    path: ${processed_monitoring.dir}/${processed_monitoring.new_df_2.name}
+  new_df_3:
+    name: new_df_3.csv
+    path: ${processed_monitoring.dir}/${processed_monitoring.new_df_3.name}
+  new_df_4:
+    name: new_df_4.csv
+    path: ${processed_monitoring.dir}/${processed_monitoring.new_df_4.name}
+
+
+final_monitoring:
+  dir: monitoring/final_monitoring
+  X_new_df_1:
+    name: X_new_df_1.csv
+    path: ${final_monitoring.dir}/${final_monitoring.X_new_df_1.name}
+  X_new_df_2:
+    name: X_new_df_2.csv
+    path: ${final_monitoring.dir}/${final_monitoring.X_new_df_2.name}
+  X_new_df_3:
+    name: X_new_df_3.csv
+    path: ${final_monitoring.dir}/${final_monitoring.X_new_df_3.name}
+  X_new_df_4:
+    name: X_new_df_4.csv
+    path: ${final_monitoring.dir}/${final_monitoring.X_new_df_4.name}
+  y_new_df_1:
+    name: y_new_df_1.csv
+    path: ${final_monitoring.dir}/${final_monitoring.X_new_df_1.name}
+  y_new_df_2:
+    name: y_new_df_2.csv
+    path: ${final_monitoring.dir}/${final_monitoring.X_new_df_2.name}
+  y_new_df_3:
+    name: y_new_df_3.csv
+    path: ${final_monitoring.dir}/${final_monitoring.X_new_df_3.name}
+  y_new_df_4:
+    name: y_new_df_4.csv
+    path: ${final_monitoring.dir}/${final_monitoring.X_new_df_4.name}
+
 final:
   dir: data/final
   X_train:
