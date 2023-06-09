@@ -3,8 +3,8 @@ defaults:
   - _self_
 
 raw:
-  path: data/raw/lending_club_loan_two.csv
-  unit_test: data/raw/unit_testing_data.csv
+  path: data/raw
+  unit_test: unit_testing_data.csv
 
 processed:
   path: data/processed/processed.csv
