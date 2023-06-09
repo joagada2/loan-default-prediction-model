@@ -4,12 +4,6 @@ import numpy as np
 from hydra.utils import to_absolute_path as abspath
 from omegaconf import DictConfig
 from sklearn.model_selection import train_test_split
-import os
-import whylogs as why
-from whylogs.api.writer.whylabs import WhyLabsWriter
-import datetime
-
-from hydra import compose, initialize
 
 def get_data(raw_path: str):
     data = pd.read_csv(raw_path)
