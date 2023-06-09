@@ -92,7 +92,7 @@ def process_df(df):
     print(df.shape)
     return df
 
-@hydra.main(version_base=None, config_path="../config", config_name="main")
+@hydra.main(version_base=None, config_path="../../config", config_name="main")
 def monitor_model(config: DictConfig):
     """Function to process the data"""
 
@@ -193,7 +193,7 @@ def monitor_model(config: DictConfig):
     # set authentication & project keys
     os.environ["WHYLABS_DEFAULT_ORG_ID"] = 'org-YNx5UG'
     os.environ["WHYLABS_API_KEY"] = 'YD0qo663PK.VJ5ZeKOjH14WMtHLGgMrvSLafZzaisZNyXQi054TRLaRmqJ5FB6J4'
-    os.environ["WHYLABS_DEFAULT_DATASET_ID"] = 'model-4'
+    os.environ["WHYLABS_DEFAULT_DATASET_ID"] = 'model-5'
 
     # Single Profile
     writer = WhyLabsWriter()

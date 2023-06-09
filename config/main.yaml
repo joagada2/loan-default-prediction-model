@@ -10,7 +10,7 @@ processed:
   path: data/processed/processed.csv
 
 raw_monitoring:
-  dir: monitoring/raw_monitoring
+  dir: data/data_for_monitoring/raw_monitoring
   new_df_1:
     name: new_df_1.csv
     path: ${raw_monitoring.dir}/${raw_monitoring.new_df_1.name}
@@ -25,7 +25,7 @@ raw_monitoring:
     path: ${raw_monitoring.dir}/${raw_monitoring.new_df_4.name}
 
 processed_monitoring:
-  dir: monitoring/processed_monitoring
+  dir: data/data_for_monitoring/processed_monitoring
   new_df_1:
     name: new_df_1.csv
     path: ${processed_monitoring.dir}/${processed_monitoring.new_df_1.name}
@@ -41,7 +41,7 @@ processed_monitoring:
 
 
 final_monitoring:
-  dir: monitoring/final_monitoring
+  dir: data/data_for_monitoring/final_monitoring
   X_new_df_1:
     name: X_new_df_1.csv
     path: ${final_monitoring.dir}/${final_monitoring.X_new_df_1.name}
