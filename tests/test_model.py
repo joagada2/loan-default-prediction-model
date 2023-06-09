@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 from pandas.testing import assert_frame_equal, assert_series_equal
-from training.src.data_preprocessing import drop_feat, get_data
+from src.training.data_preprocessing import drop_feat, get_data
 from hydra import compose, initialize
 from hydra.utils import to_absolute_path as abspath
 
