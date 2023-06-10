@@ -7,7 +7,7 @@ processed:
 
 raw:
   path: data/raw/lending_club_loan_two.csv
-  test_path: data/raw/unit_testing_data.csv
+  path1: data/raw/unit_testing_data.csv
 
 raw_monitoring:
   dir: data/data_for_monitoring/raw_monitoring
