@@ -1,0 +1,5 @@
+[2023-06-07 02:44:23,145][whylogs.api.writer.whylabs][INFO] - checking: https://whylabs-public.s3.us-west-2.amazonaws.com/whylogs_config/whylabs_condition_count_disabled
+[2023-06-07 02:44:24,625][whylogs.api.writer.whylabs][INFO] - checking: https://whylabs-public.s3.us-west-2.amazonaws.com/whylogs_config/whylabs_condition_count_disabled
+[2023-06-07 02:44:24,626][whylogs.api.writer.whylabs][INFO] - headers are: {'x-amz-id-2': 'DLUjolT4/mKtkXcLKETLno0gXojcmujkLsBqMxP/PfBO0uLbQg94JMoT4kQ7o5aEaSxWDUFmp/s=', 'x-amz-request-id': '0EMGS14QRY9618Y9', 'Date': 'Wed, 07 Jun 2023 09:44:27 GMT', 'Last-Modified': 'Thu, 23 Feb 2023 17:53:29 GMT', 'ETag': '"c4ca4238a0b923820dcc509a6f75849b"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '1'} code: 200
+[2023-06-07 02:44:24,627][whylogs.api.writer.whylabs][INFO] - found the whylabs condition count disabled file so running uncompound on condition count metrics
+[2023-06-07 02:44:28,123][whylogs.api.writer.whylabs][INFO] - Done uploading org-YNx5UG/model-1/1686131042867 to https://api.whylabsapp.com with API token ID: g9sQDLLyGo

@@ -1,0 +1,5 @@
+[2023-06-08 14:52:43,261][whylogs.api.usage_stats][WARNING] - Connection error. Skip stats collection.
+[2023-06-08 14:55:38,446][whylogs.api.writer.whylabs][INFO] - checking: https://whylabs-public.s3.us-west-2.amazonaws.com/whylogs_config/whylabs_condition_count_disabled
+[2023-06-08 14:55:39,859][whylogs.api.writer.whylabs][INFO] - checking: https://whylabs-public.s3.us-west-2.amazonaws.com/whylogs_config/whylabs_condition_count_disabled
+[2023-06-08 14:55:39,860][whylogs.api.writer.whylabs][INFO] - headers are: {'x-amz-id-2': 'NxzqoMaTd5aFCFTKiaXrwy6/XknJnM7XAttdLTtYMXerlDpRXs+R3/n58A+UYmm12k06l7n6ivU=', 'x-amz-request-id': 'J178MC8JWQ31CJJS', 'Date': 'Thu, 08 Jun 2023 21:55:42 GMT', 'Last-Modified': 'Thu, 23 Feb 2023 17:53:29 GMT', 'ETag': '"c4ca4238a0b923820dcc509a6f75849b"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '1'} code: 200
+[2023-06-08 14:55:39,861][whylogs.api.writer.whylabs][INFO] - found the whylabs condition count disabled file so running uncompound on condition count metrics

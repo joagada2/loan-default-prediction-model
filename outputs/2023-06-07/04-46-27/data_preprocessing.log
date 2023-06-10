@@ -1,0 +1,2 @@
+[2023-06-07 04:46:28,208][whylogs.api.usage_stats][WARNING] - Connection error. Skip stats collection.
+[2023-06-07 04:47:05,253][whylogs.core.dataset_profile][WARNING] - No timezone set in the datetime_timestamp object. Default to local timezone
