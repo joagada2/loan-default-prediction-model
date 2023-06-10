@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 from pandas.testing import assert_frame_equal, assert_series_equal
-#from src.training.data_preprocessing import drop_feat, get_data
+from src.training.data_preprocessing import drop_feat, get_data
 from hydra import compose, initialize
 from hydra.utils import to_absolute_path as abspath
 
@@ -19,7 +19,7 @@ def test_drop_feat(data):
 def test_get_data():
     with initialize(version_base=None, config_path="../config"):
         config = compose(config_name="main")
-    data = get_data(abspath(config.raw.unit_test))
+    data = get_data(abspath(config.raw.test_path))
     X = data.drop('Y', axis=1)
     Y = data['Y']
     X_expected = pd.DataFrame({"X1": [1, 2], "X2": [3, 4], "X3": [3, 4]})
