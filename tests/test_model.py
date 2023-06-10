@@ -19,7 +19,7 @@ def test_drop_feat(data):
 def test_get_data():
     with initialize(version_base=None, config_path="../config"):
         config = compose(config_name="main")
-    data = get_data(abspath(config.raw.path1))
+    data = get_data(abspath(config.unit_testing_data.path))
     X = data.drop('Y', axis=1)
     Y = data['Y']
     X_expected = pd.DataFrame({"X1": [1, 2], "X2": [3, 4], "X3": [3, 4]})
