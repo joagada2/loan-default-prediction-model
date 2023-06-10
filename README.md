@@ -3,7 +3,7 @@ This is an end-to-end machine learning project. Here, I will describe the projec
 
 ## PROJECT OVERVIEW/STEPS
 ### Selection of Problem
-Loan, when taken has the probability of repayment/default in line with loan terms. It is the desire of every lending organization to have their borrowers pay back their loans when due. However, this is not usually the case. In the event of loan default, lending organizations bear the loss as the loans are charged off and the shortfall is treated as expenditure. The provisions for loan defaults reduce the total loan portfolio of lending organizations and as such affect interest earnings on assets, thereby constituting a huge cost to lending houses. In view of this, every organization wishes to give loans only to those who will pay them back, only if they can accurately identify borrowers who will pay back their loans. In this project, I built a Machine Learning solution capable of predicting loan default at the point of application, with high accuracy. The model can be used for data-driven decisions as regards the approval or rejection of loan applications.
+Loan, when taken has the probability of repayment/default in line with loan terms. It is the desire of every lending organization to have their borrowers pay back their loans when due. However, this is not usually the case. In the event of loan default, lending organizations bear the loss as the loans are charged off and the shortfall is treated as expenditure. The provisions for loan defaults reduce the total loan portfolio of lending organizations and as such affect interest earnings on assets, thereby constituting a huge cost to lending houses. In view of this, every organization wishes to give loans only to those who will pay them back, only if they can accurately identify borrowers who will pay back their loans. In this project, I built a Machine Learning solution capable of predicting loan default at the point of application, with high accuracy (accuracy:81%, precission:94%, recall:80%). The model can be used for data-driven decisions as regards the approval or rejection of loan applications.
 ### Model Training
 The model training process involved extensive EDA, feature engineering, missing value handling, and data preprocessing. XGBoost was used for training. Here, I also carried out hyperparameter tunning, established the optimum hyperparameter, and trained the final model. Details are in the notebook.
 ### Experiment Tracking
@@ -41,9 +41,11 @@ The following steps can be followed to clone and run the project
   - Hydra
   - FastAPI
   - Heroku
-  - GitHub Action
+  - GitHub/GitHub Action
   - Streamlit
   - WhyLabs
+  - Git
+  - DVC
   - etc
 ### contact me on whatsapp number +2348155337422 for further clarifications on this project. Note: I am open to new opportunities in machine learning
 
