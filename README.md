@@ -1,5 +1,5 @@
 # END TO END MACHINE LEARNING PROJECT
-This is an end-to-end machine learning project. Here, I will describe the project steps and provide information on how to clone and run the project.
+This is an end-to-end machine learning project. Here, I will describe the project steps, provide information on how to clone and run the project and itemize the technologies/skills used in this project.
 
 ## PROJECT OVERVIEW/STEPS
 ### Selection of Problem
@@ -20,6 +20,8 @@ I configured continuous integration and continuous deployment workflow for the p
 I built a web application that uses the model for prediction, using Streamlit
 ### Offline Inferencing
 The model is configured for offline inferencing. Unlabeled dataframe can be taken in, processed, passed to the model for prediction, and result returned as dataframe with predicted label
+### Model Monitoring/Full Stack Observability
+Model inputs, outputs and metrics are being monitored continously for data drift, concept drift and performance decay. WhyLabs was used for this purpose.
 ### Project Versioning
 Git was used for project version control while DVC was used for model and data version control/storage in the cloud
 ## USING THE PROJECT
@@ -31,6 +33,18 @@ The following steps can be followed to clone and run the project
  -  To run the re-training code, run the following command from your command line: python training/src/main.py
  -  To run the streamlit application, run the following command from your command line: streamlit run wev/app.py
  -  To use the model for offline batch inferencing, select a subset of the training dataset, delete the label column, save the dataframe in the input_data subfolder in the inferencing folder, and run the following code from your command line: python inferencing/batch_inferencing.py
+ ## TOOLS/SKILLS USED IN THIS PROJECT
+  - Python (Pandas, matplotlib, seaborn, scikitlearn etc)
+  - XGBoost
+  - MLFlow
+  - dagshub
+  - Hydra
+  - FastAPI
+  - Heroku
+  - GitHub Action
+  - Streamlit
+  - WhyLabs
+  - etc
 ### contact me on whatsapp number +2348155337422 for further clarifications on this project. Note: I am open to new opportunities in machine learning
 
 
