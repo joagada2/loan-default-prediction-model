@@ -9,7 +9,7 @@ The model training process involved extensive EDA, feature engineering, missing 
 ### Experiment Tracking
 The experiment was registered and model parameters as well as metrics logged using MLflow and dagshub.The combination of MLflow and dagshub helped to overcome the major challenge of using MLflow which is the difficulties in collaboration since MLflow experiment tracking and model registry are traditionally done locally. In the case of this project, experiment tracking is done remotely. The project with experiments is also hosted on dagshub at https://dagshub.com/joe88data/loan-default-prediction-model
 ### Workflow Orchestration
-Workflow orchestration is necessary to enable continuous model re-training. The workflow was orchestrated using Hydra. Hence, with a single command, data preprocessing, model training, and model evaluation as well as model registry are triggered. I am currently working on using Prefect for workflow orchestrating.
+Workflow orchestration is necessary to enable continuous model re-training. The workflow was orchestrated using Python scripts and Hydra (to manage configuration). Hence, with a single command, data preprocessing, model training, and model evaluation tasks as well as model registry are triggered. Prefect will be used for workflow orchestration in my subsequent projects.
 ### Model Serving
 The model was wrapped in a FastAPI
 ### Remote Hosting of API
