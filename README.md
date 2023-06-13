@@ -9,7 +9,7 @@ The model training process involved extensive EDA, feature engineering, missing 
 ### Experiment Tracking
 The experiment was registered and model parameters as well as metrics logged using MLflow and dagshub.The combination of MLflow and dagshub helped to overcome the major challenge of using MLflow which is the difficulties in collaboration since MLflow experiment tracking and model registry are traditionally done locally. In the case of this project, experiment tracking is done remotely. The project with experiments is also hosted on dagshub at https://dagshub.com/joe88data/loan-default-prediction-model
 ### Workflow Orchestration
-Workflow orchestration is necessary to enable continuous model re-training. The workflow was orchestrated using Python scripts and Hydra (to manage configuration). Hence, with a single command, data preprocessing, model training, and model evaluation tasks as well as model registry are triggered. Prefect will be used for workflow orchestration in my subsequent projects.
+Workflow orchestration is necessary to enable continuous model re-training, batch inferencing and continous monitoring. The workflow was orchestrated using prefect. There are 3 different flows. The first contain all tasks from data preprocessing, model training to model evaluation and experiment tracking. The second flow contains all tasks for batch inferencing while the third flow contains all tasks for continuous monitoring of model in production. While the first 2 flows are triggered manually when need arises, the third ia configured to run every 24 hours for continuous model observability in production.
 ### Model Serving
 The model was wrapped in a FastAPI
 ### Remote Hosting of API
@@ -35,17 +35,18 @@ The following steps can be followed to clone and run the project
  -  To use the model for offline batch inferencing, select a subset of the training dataset, delete the label column, save the dataframe in the input_data subfolder in the inferencing folder, and run the following code from your command line: python inferencing/batch_inferencing.py
  ## TOOLS/SKILLS USED IN THIS PROJECT
   - Python (Pandas, matplotlib, seaborn, scikitlearn etc)
-  - XGBoost
-  - MLFlow
-  - dagshub
-  - Hydra
-  - FastAPI
-  - Heroku
-  - GitHub/GitHub Action
-  - Streamlit
-  - WhyLabs
-  - Git
-  - DVC
+  - XGBoost - for model training
+  - MLFlow - Experiment tracking
+  - dagshub - Experiment tracking, data storage in the cloud and code hosting
+  - Hydra - Managing configuration
+  - FastAPI - Model Serving
+  - Heroku - API exposed on Heroku
+  - GitHub/GitHub Action - Code hosting and CI/CD pipeline
+  - Streamlit - For creating web app that uses model for prediction
+  - WhyLabs - Continous monitoring of model in production
+  - Prefect - For workflow orchestration
+  - Git - For project version control
+  - DVC - For data version control
   - etc
 ### contact me on whatsapp number +2348155337422 for further clarifications on this project. Note: I am open to new opportunities in machine learning
 
