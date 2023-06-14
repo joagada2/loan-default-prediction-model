@@ -27,6 +27,7 @@ Git was used for project version control while DVC was used for model and data v
 ## USING THE PROJECT
 The following steps can be followed to clone and run the project
  -   Clone project by running: git clone https://github.com/joagada2/loan-default-prediction-model.git from your terminal.
+ -   create a virtual environment and install requirements.txt
  -   Download the dataset from: https://www.kaggle.com/wordsforthewise/lending-club and save it in the raw data sub folder in the data folder. name the dataset lending_club_loan_two.csv
  -   Change directory to the project by running the following command from your command line: cd loan-default-prediction-model (type cd loan and use shift + tab to autocomplete)
  -  To use the API, run the following command from your command line: python app/app.py
